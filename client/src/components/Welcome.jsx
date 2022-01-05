@@ -81,7 +81,6 @@ const useStyles = makeStyles({
     padding: "0px",
     borderRadius: "17px",
     height: "20rem",
-    alignItems: "center",
     flexDirection: "column",
     justifyContent: "space-evenly",
     "@media (max-width:500px)": {
