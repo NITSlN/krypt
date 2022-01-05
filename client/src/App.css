@@ -1,0 +1,11 @@
+*{
+    box-sizing: border-box;
+}
+.gradient{
+    background-image: linear-gradient(to top right,rgb(0, 0, 0) 40%,rgb(9, 25, 75), #2c2286 120%);
+}
+
+.gradient2{
+    background-image:linear-gradient(to bottom right,rgb(0, 0, 0) 40%,rgb(9, 25, 75));
+    height:fit-content;
+}
