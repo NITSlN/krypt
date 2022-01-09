@@ -39,6 +39,7 @@ const useStyles = makeStyles({
     cursor: "pointer",
     textAlign: "center",
     transition:'0.2s',
+    textDecoration:'none',
     "&:hover": {
       color: "rgb(0 118 255)",
     },
@@ -81,7 +82,7 @@ const useStyles = makeStyles({
 function Footer() {
   const classes = useStyles();
   return (
-    <div className={classes.container}>
+    <div id="footer" className={classes.container}>
       <div className={classes.container_2}>
         <div className={classes.logo}>
           <Typography
@@ -97,9 +98,10 @@ function Footer() {
           </Typography>
         </div>
         <div className={classes.paraContainer}>
-          {["Market", "Exchange", "Tutorials", "Wallets"].map((item) => {
-            return <Typography className={classes.para}>{item}</Typography>;
-          })}
+        <a className={classes.para} href="/"><Typography>Home</Typography></a>
+            <a className={classes.para} href="#services"><Typography>Services</Typography></a>
+            <a className={classes.para} href="#lt"><Typography>Transaction</Typography></a>
+            <a className={classes.para} href="#nav"><Typography>Top</Typography></a>
         </div>
       </div>
 

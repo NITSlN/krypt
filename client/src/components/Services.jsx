@@ -79,7 +79,7 @@ function Services() {
   const classes = useStyles();
 
   return (
-    <div className={classes.container}>
+    <div id="services" className={classes.container}>
       <div className={classes.left}>
         <div className={classes.text}>
           <Typography className={classes.grad}>

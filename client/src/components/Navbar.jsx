@@ -4,8 +4,7 @@ import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import { makeStyles } from "@mui/styles";
-import SwipeableDrawer from "@mui/material/SwipeableDrawer";
-import { useState } from "react";
+import { Link } from "react-scroll";
 import Drawer from "./Drawer";
 
 const useStyles = makeStyles({
@@ -23,6 +22,7 @@ const useStyles = makeStyles({
     color: "white",
     margin: "0 12px !important",
     transition: "0.2s",
+    textDecoration: "none",
     "&:hover": {
       color: "rgb(0 118 255)",
     },
@@ -45,11 +45,19 @@ const useStyles = makeStyles({
   },
 });
 
+const services = () => {
+  window.scroll({
+    top: 400,
+    left: 0,
+    behavior: "smooth",
+  });
+};
+
 function Navbar() {
   const classes = useStyles();
 
   return (
-    <Box>
+    <Box id="nav">
       <AppBar
         color="transparent"
         sx={{ flexDirection: "row", justifyContent: "center" }}
@@ -61,13 +69,23 @@ function Navbar() {
             component="div"
             sx={{ flexGrow: "0.5", color: "white", cursor: "pointer" }}
           >
-            KRYPT
+            <a href="/" style={{ textDecoration: "none", color: "white" }}>
+              KRYPT
+            </a>
           </Typography>
           <div className={classes.navbarElements}>
-            <Typography className={classes.item}>Market</Typography>
-            <Typography className={classes.item}>Exchange</Typography>
-            <Typography className={classes.item}>Tutorials</Typography>
-            <Typography className={classes.item}>Wallets</Typography>
+            <a className={classes.item} href="/">
+              <Typography>Home</Typography>
+            </a>
+            <a className={classes.item} href="#services">
+              <Typography>Services</Typography>
+            </a>
+            <a className={classes.item} href="#lt">
+              <Typography>Transaction</Typography>
+            </a>
+            <a className={classes.item} href="#footer">
+              <Typography>Contact</Typography>
+            </a>
           </div>
           <Button
             variant="contained"

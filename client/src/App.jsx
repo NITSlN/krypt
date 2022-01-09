@@ -9,6 +9,7 @@ import { createTheme } from "@mui/material/styles";
 import { ThemeProvider } from "@mui/system";
 import { Typography } from "@mui/material";
 import "./App.css";
+
 function App() {
   const theme = createTheme({
     typography: {
